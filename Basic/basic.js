@@ -1,4 +1,4 @@
-// In the given array we have to find the largest element and return the index of that element
+// In the given array we have to find the largest element and return the  element
 
 function findLarg(arr){
     let max = 0;
