@@ -1,4 +1,4 @@
-// moving zeroes to the end
+// moving zeroes to the end of an array
 
 function moveZeroes(arr){
     let j = 0;
