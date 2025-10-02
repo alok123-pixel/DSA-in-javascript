@@ -1,7 +1,9 @@
-for(let i = 1; i < 5; i++){
-    let num = ''
-    for(let j = 1; j <= i; j++){
-        num+=i;
+ let num = 1;
+for(let i = 1; i <=5; i++){
+   let row = '  '
+    for(let j=1; j <=i; j++){
+       row+=num;
+       num++;
     }
-    console.log(num)
+    console.log(row)
 }
