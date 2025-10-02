@@ -1,14 +1,14 @@
 // In this we have to find the given nuber is palindrome or not
 
-function findPalindrome(n){
-    let reverse = 0;
+function isPalindrome(n){
     let temp = n;
-    while( temp !== 0){
-        let ld = temp%10;
+    let reverse = 0;
+    while(temp !== 0){
+        let ld = temp % 10;
         reverse = reverse * 10 + ld;
         temp = Math.floor(temp/10);
     }
     return (reverse === n);
 }
 
-console.log(findPalindrome(4454))
+console.log(isPalindrome(78797));
