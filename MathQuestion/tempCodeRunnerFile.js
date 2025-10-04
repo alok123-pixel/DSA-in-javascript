@@ -1,2 +1,12 @@
-let a = Math.max(4,6)
-console.log(a);
+function Lcm(a,b){
+    let res = Math.max(a,b);
+    while(true){
+        if(res%a === 0 && res%b === 0){
+            return res;
+        }
+        res++;
+    }
+    return res;
+}
+
+console.log(Lcm(4,6));

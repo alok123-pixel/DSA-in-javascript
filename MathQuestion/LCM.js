@@ -1,3 +1,4 @@
+// In this we have to find the LCM of an two number
 function Lcm(a,b){
     let res = Math.max(a,b);
     while(true){
