@@ -14,3 +14,18 @@ function ispal(s){
     return true;
 }
 console.log(ispal("malayalam"));
+
+function Ispalindrome(str){
+    let i = 0;
+    let j = str.length-1;
+    while(i < j){
+        if(str[i] !== str[j]){
+            return false;
+        }
+        i++;
+        j--;
+    }
+    return true;
+}
+
+console.log(Ispalindrome("malayalamm"))

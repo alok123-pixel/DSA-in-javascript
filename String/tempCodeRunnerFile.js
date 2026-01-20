@@ -1,10 +1,14 @@
-function isAnagram(s1,s2){
-    if(s1.length != s2.length){
-        return false;
+function Ispalindrome(str){
+    let i = 0;
+    let j = str.length-1;
+    while(i < j){
+        if(str[i] !== str[j]){
+            return false;
+        }
+        i++;
+        j--;
     }
-    let s1s = s1.split('').sort().join('');
-    let s2s = s2.split('').sort().join('');
-
-    return (s1s === s2s);
+    return true;
 }
-console.log(isAnagram("anagram","nagaram"));
+
+console.log(Ispalindrome("malayalam"))
