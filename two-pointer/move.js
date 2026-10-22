@@ -1,15 +1,14 @@
 // moving zeroes to the end of an array
 
-function moveZeroes(arr){
-    let j = 0;
-    for(let i = 0; i < arr.length; i++){
-        if(arr[i] != 0){
-            let hold = arr[j];
-            arr[j] = arr[i];
-            arr[i] = hold;
-            j++;
+function moveZero(arr){
+    let i =0;
+    for(let j=0; j<arr.length; j++){
+        if(arr[j] !== 0){
+            [arr[i],arr[j]] = [arr[j],arr[i]];
+            i++;
         }
     }
     return arr;
 }
-console.log(moveZeroes([1,3,4,0,7,0]));
+
+console.log(moveZero([0,1,3,0,12]));
