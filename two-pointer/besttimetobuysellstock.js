@@ -26,15 +26,35 @@
 
 // Brute force appraoch
 
+// function findbesttimetobuyandsell(arr){
+//     let maxprofit = 0;
+//     for(let i=0; i<arr.length; i++){
+//         for(let j=i+1; j<arr.length; j++){
+//             let profit = arr[j] - arr[i];
+//             maxprofit = Math.max(maxprofit,profit);
+//         }
+//     }
+//     return maxprofit;
+// }
+
+// console.log(findbesttimetobuyandsell([7,6,4,3,1]));
+
+
+// optimised solution
+
 function findbesttimetobuyandsell(arr){
+    let minPrice = Infinity;
     let maxprofit = 0;
     for(let i=0; i<arr.length; i++){
-        for(let j=i+1; j<arr.length; j++){
-            let profit = arr[j] - arr[i];
-            maxprofit = Math.max(maxprofit,profit);
+        if(arr[i] < minPrice){
+            minPrice = arr[i];
         }
+
+        let profit = arr[i] - minPrice;
+        maxprofit = Math.max(maxprofit,profit);
     }
+
     return maxprofit;
 }
+console.log(findbesttimetobuyandsell([7,1,5,3,6,4]));
 
-console.log(findbesttimetobuyandsell([7,6,4,3,1]));
